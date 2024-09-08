@@ -7,7 +7,7 @@ import time
 # Define Tutor credentials
 TUTOR_ID = "ID"
 TUTOR_PASSWORD = "Password"
-
+website=""
 def give_feedback(driver, comment):
     """
     Function to submit feedback with two 5-star ratings and a comment.
@@ -99,7 +99,7 @@ def main():
         print("WebDriver initialized.")
 
         # Navigate to the login page
-        driver.get("https://demi.ischooltech.com/login/tutor")
+        driver.get(ًwebsite)
         print("Navigated to the login page.")
 
         # Automate login
