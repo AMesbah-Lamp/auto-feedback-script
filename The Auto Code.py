@@ -7,7 +7,7 @@ import time
 # Define Tutor credentials
 TUTOR_ID = "ID"
 TUTOR_PASSWORD = "Password"
-website= ""
+website= "Write the Website"
 
 def give_feedback(driver, comment):
     """
@@ -100,13 +100,13 @@ def main():
         print("WebDriver initialized.")
 
         # Navigate to the login page
-        driver.get(ًwebsite)
+        driver.get(website)
         print("Navigated to the login page.")
 
         # Automate login
         WebDriverWait(driver, 20).until(
             EC.visibility_of_element_located((By.NAME, "email"))
-        ).send_keys(TUTOR_ID + "@ischoolteams.com")  # Correctly format the email
+        ).send_keys(TUTOR_ID)  # Correctly format the email
 
         WebDriverWait(driver, 20).until(
             EC.visibility_of_element_located((By.NAME, "password"))
@@ -124,10 +124,6 @@ def main():
             EC.url_contains("my-classes")
         )
         print("Login complete. Proceeding to feedback page.")
-
-        # Navigate to the feedback page
-        driver.get("https://demi.ischooltech.com/tutor/my-classes")
-        print("Navigated to the feedback page.")
 
         # Maximize browser window
         driver.maximize_window()
