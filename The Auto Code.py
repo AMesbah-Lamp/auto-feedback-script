@@ -5,8 +5,8 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 # Define Tutor credentials
-TUTOR_ID = "T-2852"
-TUTOR_PASSWORD = "1234"
+TUTOR_ID = "ID"
+TUTOR_PASSWORD = "Password"
 
 def give_feedback(driver, comment):
     """
